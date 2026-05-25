@@ -11,7 +11,7 @@ CHOOSING_CAT, CHOOSING_PACK, ENTERING_GAME_ID, SENDING_RECEIPT, SENDING_POST = r
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [['💎 Diamond ဝယ်ယူရန်'], ['📢 Channel သို့ Post တင်ရန် (Admin)']]
+    keyboard = [['Diamond ဝယ်ယူရန်'], ['📢 Channel သို့ Post တင်ရန် (Admin)']]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await update.message.reply_text("👋 မင်္ဂလာပါရှင်။ Zeno X Shop မှ ကြိုဆိုပါတယ်။", reply_markup=reply_markup)
 
@@ -79,7 +79,7 @@ async def admin_post_send(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
     buy_conv = ConversationHandler(
-        entry_points=[MessageHandler(filters.Regex('^💎 Diamond ဝယ်ယူရန်$'), buy_diamond)],
+        entry_points=[MessageHandler(filters.Regex('^Diamond ဝယ်ယူရန်$'), buy_diamond)],
         states={
             CHOOSING_CAT: [CallbackQueryHandler(cat_chosen)],
             CHOOSING_PACK: [CallbackQueryHandler(pack_chosen)],
