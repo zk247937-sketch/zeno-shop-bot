@@ -2,7 +2,7 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes, ConversationHandler
 
-TOKEN = "8794958180:AAHMa7LmIt1cVmM3Bl7aU8osceMQkIbmE9g"
+TOKEN = "8794958180:AAEHEVLIiVF64hqt9HPxQ5UZjnvH4u4giBg"
 ADMIN_CHAT_ID = "1918804688"
 CHANNEL_ID = "@zeno_X_shop"
 
